@@ -68,7 +68,7 @@ export const getArticleDetails = async (slug) => {
         createdAt
         slug
         content {
-          html
+          raw
         }
         categories {
           name
