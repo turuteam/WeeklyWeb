@@ -1,15 +1,13 @@
-import Head from 'next/head'
 import { ArticleCard, Categories, ArticleWidget } from '../components'
 import { getArticles } from '../services'
 import FeaturedArticles from '../sections/FeaturedArticles'
+import Layout from '../components/Layout'
+
 
 export default function Home({ articles }) {
   return (
+    <Layout>
     <div className="container mx-auto mb-8 px-10">
-      <Head>
-        <title>Weekly</title>
-        <link rel="icon" href="/favicon2.ico" />
-      </Head>
       <FeaturedArticles />
 
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
@@ -27,6 +25,7 @@ export default function Home({ articles }) {
         </div>
       </div>
     </div>
+    </Layout>
   )
 }
 

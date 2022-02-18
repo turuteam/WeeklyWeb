@@ -58,6 +58,13 @@ export const getArticleDetails = async (slug) => {
         featuredImage {
           url
         }
+        seo {
+          metaTitle
+          metaDescription
+          ogImage {
+            url
+          }
+        }
         author {
           name
           bio
@@ -69,6 +76,14 @@ export const getArticleDetails = async (slug) => {
         slug
         content {
           raw
+          json
+          references {
+            __typename
+            ... on TwitterEmbed {
+              id
+              embedId
+            }
+          }
         }
         categories {
           name

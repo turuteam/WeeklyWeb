@@ -6,7 +6,7 @@ const Heart = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1792 1792"
-        style={{ height: "0.8rem" }}
+        style={{ height: "0.9rem" }}
       >
         <path
           fill="#e25555"

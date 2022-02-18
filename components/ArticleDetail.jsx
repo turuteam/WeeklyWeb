@@ -1,5 +1,8 @@
 import moment from 'moment';
 import React from 'react';
+import { RichText } from '@graphcms/rich-text-react-renderer';
+import {TwitterTweetEmbed} from 'react-twitter-embed';
+
 //import Script from 'react-load-script';
 
 /* const AddThis = (props) => {
@@ -15,9 +18,6 @@ import React from 'react';
     }; */
 
 const ArticleDetail = ({ article }) => {
-  
-  console.log(article.content.raw);
-  
     const getContentFragment = (index, text, obj, type) => {
         let modifiedText = text;
     
@@ -32,20 +32,21 @@ const ArticleDetail = ({ article }) => {
     
           if (obj.underline) {
             modifiedText = (<u key={index}>{text}</u>);
-          }
-          
+          }          
         }
 
         switch (type) {
+            case 'heading-two':
+              return <h2 key={index} className="text-3xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
             case 'heading-three':
-              return <h3 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
+              return <h3 key={index} className="text-2xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
             case 'paragraph':
               return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
             case 'heading-four':
-              return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
+              return <h4 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
             case 'image':
               return (
-                <img
+                <img class="object-none object-center"
                   key={index}
                   alt={obj.title}
                   height={obj.height}
@@ -53,15 +54,30 @@ const ArticleDetail = ({ article }) => {
                   src={obj.src}
                 />
               );
+            case 'block-quote':
+              return (
+                <blockquote className="p-4 italic border-l-4 bg-neutral-100 text-neutral-600 border-neutral-500 quote" key={index}>{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</blockquote>
+              )
+            case 'link':
+              console.log({obj, modifiedText})
+                return <a key={index} href={obj.href}>{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</a>
+            case 'iframe': 
+              console.log({obj, modifiedText})
+              return <iframe class="object-none object-center" key={index} width={obj.width} height={obj.height} src={obj.url}></iframe>
+            case 'embed':
+              return < TwitterTweetEmbed  key={index} tweetId={obj.embedId} />
+
+
             default:
+              console.log({type})
               return modifiedText;
-          }
-        };
+        }
+    };
+
+    console.log('json', article.content.json)
+    console.log('references', article.content.references)
 
   return (
-    
-    <>
-    
     <div className='bg-white shadow-lg lg:p-8 pb-12 mb-8'> 
         <div className='relative overflow-hidden shadow-md mb-6'>
             <img 
@@ -89,20 +105,30 @@ const ArticleDetail = ({ article }) => {
               <span className="align-middle">{moment(article.createdAt).format('DD MMM YYYY')}</span>
             </div>
           </div>
-            <h1 className='mb-8 text-3xl font semibold'>{article.title}</h1>
-            
-            
+            <h1 className='mb-8 text-4xl font-semibold'>{article.title}</h1>
+          
+
+            {/* <RichText 
+              content={article.content.raw}
+              renderers={{
+                embed: {
+                  TwitterEmbed: ({ embedId }) => {
+                    return (
+                      <TwitterTweetEmbed tweetId={embedId} />
+                    );
+                  },
+                },
+              }} 
+            />*/}
             
             {article.content.raw.children.map((typeObj, index) => {
                 const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text, item))
 
-                return getContentFragment(index, children, typeObj, typeObj.type)
-                
-                
+                return getContentFragment(index, children, typeObj, typeObj.type)      
             })}
+
         </div>
       </div>
-    </>
   );
           };
 
