@@ -33,7 +33,7 @@ const renderText = ({ text, italic, bold, underline }) => {
 
 const renderLink = ({ children, href }, index) => {
   return (
-    <a className='underline underline-offset-1' href={href}>
+    <a className="underline underline-offset-1" href={href}>
       {children.map((content, index) => (
         <React.Fragment key={index}>{content.text}</React.Fragment>
       ))}
@@ -91,24 +91,22 @@ const contentRenderer = {
     )
   },
   image: ({ children, height, mimeType, src, title, width, handle }) => {
-    return (
-      <img
-        class="object-none object-center"
-        alt={title}
-        height={height}
-        width={width}
-        src={src}
-      />
-    )
+    return <img className="max-w-full" alt={title} src={src} />
   },
   iframe: ({ children, height, url, width, handle }) => {
     return (
-      <iframe
-        class="object-none object-center"
-        width={width}
-        height={height}
-        src={url}
-      ></iframe>
+      <div
+        style={{
+          height: 0,
+          paddingBottom: `${(100 * height) / width}%`,
+        }}
+        className="relative"
+      >
+        <iframe
+          className="absolute h-full w-full w-full object-none object-center"
+          src={url}
+        ></iframe>
+      </div>
     )
   },
   link: renderLink,
