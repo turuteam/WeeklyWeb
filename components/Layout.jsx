@@ -22,7 +22,7 @@ const Layout = ({ metaSeo = {}, isArticle = false, children }) => {
       {isArticle && (
         <>
           <meta property='og:type' content='article' key='og:type' />
-          <meta property='og:image' content={`${metaSeo?.ogImage.url}`} key='og:image' />
+          <meta property='og:image' content={`${metaSeo?.ogImage?.url}`} key='og:image' />
           <meta name='twitter:card' content='summary_large_image' key='twitter:card' />
           <meta property='article:published_time' content={metaSeo?.createdAt} key='article:published_time' />
         </>
