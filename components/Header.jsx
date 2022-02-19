@@ -37,8 +37,8 @@ const Header = () => {
               <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
               <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
             </div>
-            <ul className={isNavOpen ? 'showMenuNav' : 'hideMenuNav'}>
-              <div onClick={() => setIsNavOpen(false)}>
+            <ul className={isNavOpen ? 'showMenuNav fixed' : 'hideMenuNav'}>
+              <div className='absolute top-0 right-0' onClick={() => setIsNavOpen(false)}>
                 <svg
                   className="h-8 w-8 text-gray-600"
                   viewBox="0 0 24 24"
