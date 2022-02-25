@@ -23,7 +23,7 @@ const ArticleDetails = ({ article }) => {
 
   const metaSeo = {
     ...article?.seo,
-    createdAt: article.createdAt,
+    createdAt: article?.createdAt,
   }
 
   console.log(metaSeo)
