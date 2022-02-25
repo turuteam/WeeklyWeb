@@ -22,7 +22,7 @@ const ArticleDetails = ({ article }) => {
   const router = useRouter()
 
   const metaSeo = {
-    ...article.seo,
+    ...article?.seo,
     createdAt: article.createdAt,
   }
 
