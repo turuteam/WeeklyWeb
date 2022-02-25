@@ -1,7 +1,6 @@
 import moment from 'moment'
 import 'moment/locale/it' 
 import React from 'react'
-import { RichText } from '@graphcms/rich-text-react-renderer'
 import { TwitterTweetEmbed } from 'react-twitter-embed'
 
 const renderText = ({ text, italic, bold, underline }) => {

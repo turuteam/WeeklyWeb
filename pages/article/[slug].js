@@ -22,10 +22,11 @@ const ArticleDetails = ({ article }) => {
   const router = useRouter()
 
   const metaSeo = {
-    ...article.seo,
-    createdAt: article.createdAt,
+    ...article?.seo,
+    createdAt: article?.createdAt,
   }
 
+  console.log(metaSeo)
   if (router.isFallback) {
     return <Loader />
   }
