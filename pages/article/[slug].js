@@ -26,6 +26,7 @@ const ArticleDetails = ({ article }) => {
     createdAt: article.createdAt,
   }
 
+  console.log(metaSeo)
   if (router.isFallback) {
     return <Loader />
   }

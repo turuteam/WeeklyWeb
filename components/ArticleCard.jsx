@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 
 const ArticleCard = ({ article }) => {
-  console.log(article.isInterview);
 
   if(article.isInterview){
     return ( 
