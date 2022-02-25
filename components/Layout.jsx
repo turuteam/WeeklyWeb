@@ -9,11 +9,11 @@ const Layout = ({ metaSeo = {}, isArticle = false, children }) => {
   return (
   <>
     <Head>
-      <title>{metaSeo?.metaTitle || 'default value'} </title>
+      <title>{metaSeo?.metaTitle || 'Weekly'} </title>
       <link rel="icon" href="/favicon2.ico" />
       <meta description={metaSeo?.metaDescription || 'default value'} />
 
-      <meta name='og:title' content={metaSeo?.metaTitle || 'default value'} />
+      <meta name='og:title' content={metaSeo?.metaTitle || 'Weekly'} />
       <meta name='og:description' content={metaSeo?.metaDescription || 'default value'} />
       <meta name='og:url' content={`http://www.weeklyweb.it/category/${metaSeo?.metaSlug}`} />
       <meta name='og:site_name' content={'Weekly'} />

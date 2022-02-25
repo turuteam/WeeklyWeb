@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <div className="container mx-auto mb-8 px-10">
       <div className="inline-block flex w-full items-center justify-between border-b border-gray-400 py-8 ">
-        <Link href="/">
+        <Link href="https://www.weeklyweb.it">
           <Image
             className="logo"
             src={logo}
@@ -38,9 +38,9 @@ const Header = () => {
               <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
             </div>
             <ul className={isNavOpen ? 'showMenuNav fixed' : 'hideMenuNav'}>
-              <div className='absolute top-0 right-0' onClick={() => setIsNavOpen(false)}>
+              <div className='absolute top-8 right-9' onClick={() => setIsNavOpen(false)}>
                 <svg
-                  className="h-8 w-8 text-gray-600"
+                  className="h-9 w-9 text-gray-400"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -55,19 +55,22 @@ const Header = () => {
               {categories.map((category, index) => (
                 <li
                   key={index}
-                  className="transition-duration-700 text-weekly hover:translate-y-3"
+                  className=" text-weekly ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                   onClick={() => setIsNavOpen(false)}
                 >
                   <Link href={`/category/${category.slug}`}>
-                    <span className="transition-duration-700 mt-2 ml-4 cursor-pointer align-middle font-bold text-black hover:text-weekly md:float-right ">
+                    <span className="mt-2 ml-4 cursor-pointer align-middle font-bold text-black text-xl hover:text-weekly md:float-right ">
                       {category.name}
                     </span>
                   </Link>
                 </li>
+                
               ))}
             </ul>
+
+            
           </div>
-          <div className="lg-10 block hidden italic">La settimana in breve</div>
+          
           <div className="hidden md:contents lg:text-lg">
             {categories.map((category, index) => (
               <Link key={index} href={`/category/${category.slug}`}>
@@ -77,6 +80,7 @@ const Header = () => {
               </Link>
             ))}
           </div>
+          <div className="lg-10 block  hidden italic">La settimana in breve</div>
         </div>
       </div>
       <style>{`

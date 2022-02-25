@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import moment from 'moment';
+import 'moment/locale/it';
 import Link from 'next/link';
 
 import { getRecentArticles, getSimilarArticles } from '../services';
@@ -37,9 +38,9 @@ const ArticleWidget = ({ categories, slug }) => {
             </div>
             <div className='flex-grow ml-4'>
               <p className='text-gray-500 font-xs'>
-                {moment(article.createdAt).format('DD MMM YYYY')}
+                {moment(article.createdAt).format('D MMMM YYYY')}
               </p>
-              <Link href={`/article/${article.slug}`} key={article.title} className='text-md'>
+              <Link href={`/article/${article.slug}`} key={article.title} className='text-base'>
                 {article.title}
               </Link>
             </div>

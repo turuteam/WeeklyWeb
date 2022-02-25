@@ -11,6 +11,7 @@ export const getArticles = async () => {
             createdAt
             slug
             title
+            isInterview
             categories {
               name
               slug
@@ -55,6 +56,7 @@ export const getArticleDetails = async (slug) => {
     query GetArticleDetails($slug: String!) {
       article(where: { slug: $slug }) {
         title
+        isInterview
         featuredImage {
           url
         }
