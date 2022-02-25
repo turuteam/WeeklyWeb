@@ -4,13 +4,31 @@ import Link from 'next/link';
 
 
 const ArticleCard = ({ article }) => {
-  console.log(article);
+  console.log(article.isInterview);
 
-  return ( <div>
+  if(article.isInterview){
+    return ( 
+    <div className='shadow-lg p-0 lg:p-0 pb-0 mb-8 rounded-lg'>
+      <div className='border-8 border-solid rounded-md border-weekly p-3  pb-3 hover:animate-pulse'>
+        <span className='absolute -mt-7 -ml-50w-full flex justify-center text-white bg-weekly uppercase text-base
+        font-semibold font-sans tracking-wide whitespace-pre'>  L'Intervista  </span>
+        <div className='font-semibold text-2xl uppercase '>
+          <Link href={`/article/${article.slug}`}>
+            {article.title}
+          </Link>
+        </div>
+      </div>
+  </div>
+  )
+  }
+  else{
+    return(
+      <div>
       <div className='bg-black shadow-lg rounded-lg p-0 lg:p-0 pb-0 mb-8'>
         <div className='relative overflow-hidden shadow-md pb-80 mb-6'>
           <img src={article.featuredImage.url} 
               alt={article.title}
+              
               className='object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg'
            />
         </div>
@@ -32,17 +50,18 @@ const ArticleCard = ({ article }) => {
           </div>
           <div className="font-medium text-white-700"></div>
             <span>
-              {moment(article.createdAt).format('DD MMM YYYY')}
+              {moment(article.createdAt).format('D MMMM YYYY')}
             </span>
-
-            
-
         </div>
     </div>
   </div>
 
+    )
 
-  )
+  }
+  
+
+  
 };
 
 export default ArticleCard;

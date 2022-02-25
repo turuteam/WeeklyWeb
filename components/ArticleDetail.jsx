@@ -1,4 +1,5 @@
 import moment from 'moment'
+import 'moment/locale/it' 
 import React from 'react'
 import { RichText } from '@graphcms/rich-text-react-renderer'
 import { TwitterTweetEmbed } from 'react-twitter-embed'
@@ -33,7 +34,7 @@ const renderText = ({ text, italic, bold, underline }) => {
 
 const renderLink = ({ children, href }, index) => {
   return (
-    <a className="underline underline-offset-1" href={href}>
+    <a className="hover:underline underline-offset-1 text-weekly font-semibold" href={href}>
       {children.map((content, index) => (
         <React.Fragment key={index}>{content.text}</React.Fragment>
       ))}
@@ -128,7 +129,7 @@ const contentRenderer = {
 const ArticleDetail = ({ article }) => {
   return (
     <div className="mb-8 bg-white pb-12 shadow-lg lg:p-8">
-      <div className="relative mb-6 overflow-hidden shadow-md">
+      <div className="relative overflow-hidden shadow-md mb-6">
         <img
           src={article.featuredImage.url}
           alt={article.title}
@@ -142,7 +143,7 @@ const ArticleDetail = ({ article }) => {
               alt={article.author.name}
               height="30px"
               width="30px"
-              className="rounded-full align-middle"
+              className="align-middle rounded-full"
               src={article.author.photo.url}
             />
             <p className="ml-2 inline align-middle text-lg font-medium text-gray-700">
@@ -165,7 +166,8 @@ const ArticleDetail = ({ article }) => {
               />
             </svg>
             <span className="align-middle">
-              {moment(article.createdAt).format('DD MMM YYYY')}
+              
+              {moment(article.createdAt).format('DD MMMM YYYY')}
             </span>
           </div>
         </div>
