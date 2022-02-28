@@ -83,7 +83,7 @@ const contentRenderer = {
   },
   'block-quote': ({ children }) => {
     return (
-      <blockquote className="quote border-l-4 border-neutral-500 bg-neutral-100 p-4 italic text-neutral-600">
+      <blockquote className="quote p-4 italic text-neutral-600">
         {children.map((content, index) => (
           <React.Fragment key={index}>{renderText(content)}</React.Fragment>
         ))}
@@ -187,5 +187,5 @@ const ArticleDetail = ({ article }) => {
   )
 }
 
-export default ArticleDetail
-// export default AddThis;
+export default ArticleDetail;
+

@@ -47,7 +47,6 @@ const ArticleDetails = ({ article }) => {
               slug={article.slug}
               categories={article.categories.map((category) => category.slug)}
             />
-            <Categories />
           </div>
         </div>
       </div>
