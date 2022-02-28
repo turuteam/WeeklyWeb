@@ -4,7 +4,7 @@ import raffaeleB from '../public/images/raffaeleB2.jpg'
 import sofia from '../public/images/sofia2.jpg'
 import alessandro from '../public/images/alessandro2.jpg'
 import sara from '../public/images/sara2.jpg'
-import giuliaB from '../public/images/giuliaB.jpg'
+import giuliaB from '../public/images/giuliaB.JPG'
 import federica from '../public/images/federica.jpg'
 import giorgia from '../public/images/giorgia2.jpeg'
 import raffaeleP from '../public/images/raffaeleP.jpg'
@@ -694,6 +694,14 @@ export default function Home({ articles }) {
                     </figcaption>
                   </div>
                 </figure>
+              </div>
+
+              <div className="mx-5 my-5 basis-1/3">
+                <figure className=" h-full rounded-xl bg-white p-8 md:p-4 "></figure>
+              </div>
+
+              <div className="mx-5 my-5 basis-1/3">
+                <figure className=" h-full rounded-xl bg-white p-8 md:p-4 "></figure>
               </div>
             </div>
           </div>

@@ -41,8 +41,8 @@ const ArticleCard = ({ article }) => {
           <div className='flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8'>
             <img src={article.author.photo?.url}
                 alt={article.author.name}
-                height="30"
-                width="30" 
+                height="40"
+                width="40" 
                 className='align-middle rounded-full'
                 />
                 <p className='inline align-middle text-white-700 ml-2 text-lg'>{article.author.name}</p>
