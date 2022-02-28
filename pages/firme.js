@@ -1,12 +1,12 @@
 import Layout from '../components/Layout'
 import Image from 'next/image'
-import raffaeleB from '../public/images/raffaeleB.jpg'
+import raffaeleB from '../public/images/raffaeleB2.jpg'
 import sofia from '../public/images/sofia2.jpg'
-import alessandro from '../public/images/alessandro.jpg'
-import sara from '../public/images/sara.jpg'
+import alessandro from '../public/images/alessandro2.jpg'
+import sara from '../public/images/sara2.jpg'
 import giuliaB from '../public/images/giuliaB.jpg'
 import federica from '../public/images/federica.jpg'
-import giorgia from '../public/images/giorgia.jpeg'
+import giorgia from '../public/images/giorgia2.jpeg'
 import raffaeleP from '../public/images/raffaeleP.jpg'
 import chiara from '../public/images/chiara.jpeg'
 import lorenzo from '../public/images/lorenzo.jpg'
@@ -14,7 +14,7 @@ import greta from '../public/images/greta.jpg'
 import pasquale from '../public/images/pasquale.jpg'
 import micol from '../public/images/micol.jpeg'
 import andrea from '../public/images/andrea.jpg'
-import fabiana from '../public/images/fabiana.jpg'
+import fabiana from '../public/images/fabiana2.jpg'
 import erica from '../public/images/erica.jpg'
 import giuliaC from '../public/images/giuliaC.jpg'
 import laura from '../public/images/laura.jpg'
@@ -30,9 +30,9 @@ export default function Home({ articles }) {
               La redazione
             </div>
             {/* First row */}
-            <div className="flex flex-col lg:flex-row">
-              <div className="mx-5 my-5 basis-1/3">
-                <figure className=" rounded-xl bg-weekly p-8 md:p-4 ">
+            <div className="flex flex-col items-stretch lg:flex-row">
+              <div className="dropshadow-lg mx-5 my-5 basis-1/3">
+                <figure className=" h-full rounded-xl bg-weekly  p-8 md:p-4 ">
                   <div className="md:w-30 mx-auto h-24 w-24 md:h-auto md:rounded-full">
                     <Image
                       className="mx-auto h-24 w-24 justify-center rounded-full object-cover md:h-auto  md:w-48"
@@ -45,7 +45,7 @@ export default function Home({ articles }) {
 
                   <div class="space-y-4 pt-6 text-center md:p-8 md:text-left">
                     <blockquote>
-                      <p className="text-left text-sm  font-medium text-white md:text-base">
+                      <p className="text-left text-sm  font-medium text-white md:text-lg">
                         Lucano di nascita, ho studiato a Bologna. Al venerdì
                         sera penso ancora di viverci. In sei anni ho cambiato
                         quattro città. Quando sono triste ascolto De Andrè,
@@ -55,10 +55,10 @@ export default function Home({ articles }) {
                       </p>
                     </blockquote>
                     <figcaption className="font-medium">
-                      <div className="text-sky-500 dark:text-sky-400">
+                      <div className="text-sky-300">
                         Raffaele Riccardo Buccolo
                       </div>
-                      <div className="text-slate-400">
+                      <div className="text-slate-300">
                         Direttore Responsabile ed editoriale
                       </div>
                     </figcaption>
@@ -66,8 +66,8 @@ export default function Home({ articles }) {
                 </figure>
               </div>
 
-              <div className="mx-5 my-5 basis-1/3">
-                <figure className=" rounded-xl bg-weekly p-8 md:p-4 ">
+              <div className="dropshadow-lg mx-5 my-5 basis-1/3">
+                <figure className=" h-full rounded-xl bg-weekly p-8 md:p-4 ">
                   <div className="md:w-30 mx-auto h-24 w-24 md:h-auto md:rounded-full">
                     <Image
                       className="mx-auto h-24 w-24 justify-center rounded-full object-cover md:h-auto  md:w-48"
@@ -80,7 +80,7 @@ export default function Home({ articles }) {
 
                   <div class="space-y-4 pt-6 text-center md:p-8 md:text-left">
                     <blockquote>
-                      <p className="text-left text-sm font-medium text-white md:text-base">
+                      <p className="text-left text-sm font-medium text-white md:text-lg">
                         Altro che radici, le origini sono catene. Compreso
                         questo, tutto in discesa: essere siciliana è la skill di
                         cui vado più fiera. Scrivo per distinguere le cose, non
@@ -91,10 +91,8 @@ export default function Home({ articles }) {
                       </p>
                     </blockquote>
                     <figcaption className="font-medium">
-                      <div className="text-sky-500 dark:text-sky-400">
-                        Sofia D'Arrigo
-                      </div>
-                      <div className="text-slate-400">
+                      <div className="text-sky-300">Sofia D'Arrigo</div>
+                      <div className="text-slate-300">
                         Direttore Responsabile ed editoriale
                       </div>
                     </figcaption>
@@ -103,7 +101,7 @@ export default function Home({ articles }) {
               </div>
 
               <div className="mx-5 my-5 basis-1/3">
-                <figure className=" rounded-xl bg-weekly p-8 md:p-4 ">
+                <figure className=" h-full rounded-xl bg-weekly p-8  md:p-4">
                   <div className="md:w-30 mx-auto h-24 w-24 md:h-auto md:rounded-full">
                     <Image
                       className="mx-auto h-24 w-24 justify-center rounded-full object-cover md:h-auto  md:w-48"
@@ -116,7 +114,7 @@ export default function Home({ articles }) {
 
                   <div class="space-y-4 pt-6 text-center md:p-8 md:text-left">
                     <blockquote>
-                      <p className="text-left text-sm font-medium text-white md:text-base">
+                      <p className="text-left text-sm font-medium text-white md:text-lg">
                         Sono nato in Romagna (terra “solatia, dolce paese”, come
                         scriveva Pascoli) e da qui mi sposto sempre a
                         malincuore. Leggo, scrivo, mi guardo intorno e cerco di
@@ -126,10 +124,8 @@ export default function Home({ articles }) {
                       </p>
                     </blockquote>
                     <figcaption className="font-medium">
-                      <div className="text-sky-500 dark:text-sky-400">
-                        Alessandro Mambelli
-                      </div>
-                      <div className="text-slate-400">Vicedirettore</div>
+                      <div className="text-sky-300">Alessandro Mambelli</div>
+                      <div className="text-slate-300">Vicedirettore</div>
                     </figcaption>
                   </div>
                 </figure>
@@ -138,9 +134,9 @@ export default function Home({ articles }) {
 
             {/* Second row */}
 
-            <div className="flex flex-col lg:flex-row">
+            <div className="flex flex-col items-stretch lg:flex-row">
               <div className="mx-5 my-5 basis-1/3">
-                <figure className=" rounded-xl bg-weekly p-8 md:p-4 ">
+                <figure className=" h-full rounded-xl bg-weekly p-8 md:p-4 ">
                   <div className="md:w-30 mx-auto h-24 w-24 md:h-auto md:rounded-full">
                     <Image
                       className="mx-auto h-24 w-24 justify-center rounded-full object-cover md:h-auto  md:w-48"
@@ -153,7 +149,7 @@ export default function Home({ articles }) {
 
                   <div class="space-y-4 pt-6 text-center md:p-8 md:text-left">
                     <blockquote>
-                      <p className="text-left text-sm  font-medium text-white md:text-base">
+                      <p className="text-left text-sm  font-medium text-white md:text-lg">
                         L’unica bolognese che forse non mangia ragù e
                         tortellini. Vegana per l’etica e per l’ambiente.
                         Cucinare sano mi fa stare bene. Nel sangue e nel cuore
@@ -165,17 +161,15 @@ export default function Home({ articles }) {
                       </p>
                     </blockquote>
                     <figcaption className="font-medium">
-                      <div className="text-sky-500 dark:text-sky-400">
-                        Sara Ausilio
-                      </div>
-                      <div className="text-slate-400">Vicedirettrice</div>
+                      <div className="text-sky-300">Sara Ausilio</div>
+                      <div className="text-slate-300">Vicedirettrice</div>
                     </figcaption>
                   </div>
                 </figure>
               </div>
 
-              <div className="mx-5 my-5 basis-1/3">
-                <figure className=" rounded-xl bg-weekly p-8 md:p-4 ">
+              <div className="mx-5 my-5 basis-1/3 items-stretch">
+                <figure className=" h-full rounded-xl bg-weekly p-8 md:p-4 ">
                   <div className="md:w-30 mx-auto h-24 w-24 md:h-auto md:rounded-full">
                     <Image
                       className="mx-auto h-24 w-24 justify-center rounded-full object-cover md:h-auto  md:w-48"
@@ -188,7 +182,7 @@ export default function Home({ articles }) {
 
                   <div class="space-y-4 pt-6 text-center md:p-8 md:text-left">
                     <blockquote>
-                      <p className="text-left text-sm font-medium text-white md:text-base">
+                      <p className="text-left text-sm font-medium text-white md:text-lg">
                         Umile umanista di Novara, cresciuta tra campi di basket
                         e montagne di libri. Non dico mai no a una fetta di
                         pizza e a una passeggiata tra amici. Leggo, guardo e
@@ -198,17 +192,15 @@ export default function Home({ articles }) {
                       </p>
                     </blockquote>
                     <figcaption className="font-medium">
-                      <div className="text-sky-500 dark:text-sky-400">
-                        Giulia Battista
-                      </div>
-                      <div className="text-slate-400">Redattrice</div>
+                      <div className="text-sky-300">Giulia Battista</div>
+                      <div className="text-slate-300">Redattrice</div>
                     </figcaption>
                   </div>
                 </figure>
               </div>
 
               <div className="mx-5 my-5 basis-1/3">
-                <figure className=" w-full rounded-xl bg-weekly p-8 md:p-4">
+                <figure className=" h-full w-full rounded-xl bg-weekly p-8 md:p-4">
                   <div className="md:w-30 mx-auto h-24 w-24 md:h-auto md:rounded-full">
                     <Image
                       className="mx-auto h-24 w-24 justify-center rounded-full object-cover md:h-auto  md:w-48"
@@ -221,7 +213,7 @@ export default function Home({ articles }) {
 
                   <div class="space-y-4 pt-6 text-center md:p-8 md:text-left">
                     <blockquote>
-                      <p className="text-left text-sm font-medium text-white md:text-base">
+                      <p className="text-left text-sm font-medium text-white md:text-lg">
                         Nata fra le colline Marchigiane, cresciuta a pane e
                         racconti. Ho subito conosciuto il potere delle parole e
                         ho deciso di farne la mia vocazione. Antirazzista,
@@ -234,10 +226,8 @@ export default function Home({ articles }) {
                       </p>
                     </blockquote>
                     <figcaption className="font-medium">
-                      <div className="text-sky-500 dark:text-sky-400">
-                        Federica Morichetti
-                      </div>
-                      <div className="text-slate-400">Redattrice</div>
+                      <div className="text-sky-300">Federica Morichetti</div>
+                      <div className="text-slate-300">Redattrice</div>
                     </figcaption>
                   </div>
                 </figure>
@@ -246,9 +236,9 @@ export default function Home({ articles }) {
 
             {/* Third row */}
 
-            <div className="flex flex-col lg:flex-row">
+            <div className="flex flex-col items-stretch lg:flex-row">
               <div className="mx-5 my-5 basis-1/3">
-                <figure className=" rounded-xl bg-weekly p-8 md:p-4 ">
+                <figure className=" h-full rounded-xl bg-weekly p-8 md:p-4 ">
                   <div className="md:w-30 mx-auto h-24 w-24 md:h-auto md:rounded-full">
                     <Image
                       className="mx-auto h-24 w-24 justify-center rounded-full object-cover md:h-auto  md:w-48"
@@ -261,7 +251,7 @@ export default function Home({ articles }) {
 
                   <div class="space-y-4 pt-6 text-center md:p-8 md:text-left">
                     <blockquote>
-                      <p className="text-left text-sm  font-medium text-white md:text-base">
+                      <p className="text-left text-sm  font-medium text-white md:text-lg">
                         Abruzzese (con due “B”) d’origine ed emiliana di vita o
                         passaggio. Non mangio animali e mi interesso di
                         ambiente, arte e diversità nel mondo.Conoscere,
@@ -270,17 +260,15 @@ export default function Home({ articles }) {
                       </p>
                     </blockquote>
                     <figcaption className="font-medium">
-                      <div className="text-sky-500 dark:text-sky-400">
-                        Gioriga Persico
-                      </div>
-                      <div className="text-slate-400">Redattrice</div>
+                      <div className="text-sky-300">Gioriga Persico</div>
+                      <div className="text-slate-300">Redattrice</div>
                     </figcaption>
                   </div>
                 </figure>
               </div>
 
               <div className="mx-5 my-5 basis-1/3">
-                <figure className=" rounded-xl bg-weekly p-8 md:p-4 ">
+                <figure className=" h-full rounded-xl bg-weekly p-8 md:p-4 ">
                   <div className="md:w-30 mx-auto h-24 w-24 md:h-auto md:rounded-full">
                     <Image
                       className="mx-auto h-24 w-24 justify-center rounded-full object-cover md:h-auto  md:w-48"
@@ -293,7 +281,7 @@ export default function Home({ articles }) {
 
                   <div class="space-y-4 pt-6 text-center md:p-8 md:text-left">
                     <blockquote>
-                      <p className="text-left text-sm font-medium text-white md:text-base">
+                      <p className="text-left text-sm font-medium text-white md:text-lg">
                         Quando parlo, si sente subito il DNA sardo. Amo scoprire
                         e raccontare gli eventi e gli oggetti precedenti al
                         2000. Fin da piccolo mi appassionano le automobili
@@ -306,17 +294,15 @@ export default function Home({ articles }) {
                       </p>
                     </blockquote>
                     <figcaption className="font-medium">
-                      <div className="text-sky-500 dark:text-sky-400">
-                        Raffaele Pitzalis
-                      </div>
-                      <div className="text-slate-400">Redattore</div>
+                      <div className="text-sky-300">Raffaele Pitzalis</div>
+                      <div className="text-slate-300">Redattore</div>
                     </figcaption>
                   </div>
                 </figure>
               </div>
 
               <div className="mx-5 my-5 basis-1/3">
-                <figure className=" w-full rounded-xl bg-weekly p-8 md:p-4">
+                <figure className=" h-full w-full rounded-xl bg-weekly p-8 md:p-4">
                   <div className="md:w-30 mx-auto h-24 w-24 md:h-auto md:rounded-full">
                     <Image
                       className="mx-auto h-24 w-24 justify-center rounded-full object-cover md:h-auto  md:w-48"
@@ -329,7 +315,7 @@ export default function Home({ articles }) {
 
                   <div class="space-y-4 pt-6 text-center md:p-8 md:text-left">
                     <blockquote>
-                      <p className="text-left text-sm font-medium text-white md:text-base">
+                      <p className="text-left text-sm font-medium text-white md:text-lg">
                         Torinese solo sulla carta di identità, (anzi neanche lì,
                         vivo in provincia, ma la città fa più figo). Sono a
                         volte distratta e procrastinatrice seriale, ma ho anche
@@ -342,21 +328,19 @@ export default function Home({ articles }) {
                       </p>
                     </blockquote>
                     <figcaption className="font-medium">
-                      <div className="text-sky-500 dark:text-sky-400">
-                        Chiara Verra
-                      </div>
-                      <div className="text-slate-400">Redattrice</div>
+                      <div className="text-sky-300">Chiara Verra</div>
+                      <div className="text-slate-300">Redattrice</div>
                     </figcaption>
                   </div>
                 </figure>
               </div>
             </div>
 
-            {/* Fouth row */}
+            {/* Fourth row */}
 
-            <div className="flex flex-col lg:flex-row">
+            <div className="flex flex-col items-stretch lg:flex-row">
               <div className="mx-5 my-5 basis-1/3">
-                <figure className=" rounded-xl bg-weekly p-8 md:p-4 ">
+                <figure className=" h-full rounded-xl bg-weekly p-8 md:p-4 ">
                   <div className="md:w-30 mx-auto h-24 w-24 md:h-auto md:rounded-full">
                     <Image
                       className="mx-auto h-24 w-24 justify-center rounded-full object-cover md:h-auto  md:w-48"
@@ -369,7 +353,7 @@ export default function Home({ articles }) {
 
                   <div class="space-y-4 pt-6 text-center md:p-8 md:text-left">
                     <blockquote>
-                      <p className="text-left text-sm  font-medium text-white md:text-base">
+                      <p className="text-left text-sm  font-medium text-white md:text-lg">
                         Padovano di nascita, come Greta convivo con nebbia e
                         umidità, con l’unica differenza che ancora non ho
                         imparato a conviverci. Avrei fatto il pittore, ma la
@@ -382,17 +366,15 @@ export default function Home({ articles }) {
                       </p>
                     </blockquote>
                     <figcaption className="font-medium">
-                      <div className="text-sky-500 dark:text-sky-400">
-                        Lorenzo Zamana
-                      </div>
-                      <div className="text-slate-400">Redattore</div>
+                      <div className="text-sky-300">Lorenzo Zamana</div>
+                      <div className="text-slate-300">Redattore</div>
                     </figcaption>
                   </div>
                 </figure>
               </div>
 
               <div className="mx-5 my-5 basis-1/3">
-                <figure className=" rounded-xl bg-weekly p-8 md:p-4 ">
+                <figure className=" h-full rounded-xl bg-weekly p-8 md:p-4 ">
                   <div className="md:w-30 mx-auto h-24 w-24 md:h-auto md:rounded-full">
                     <Image
                       className="mx-auto h-24 w-24 justify-center rounded-full object-cover md:h-auto  md:w-48"
@@ -405,23 +387,19 @@ export default function Home({ articles }) {
 
                   <div class="space-y-4 pt-6 text-center md:p-8 md:text-left">
                     <blockquote>
-                      <p className="text-left text-sm font-medium text-white md:text-base">
-                        Quando parlo, si sente subito il DNA sardo. Amo scoprire
-                        e raccontare gli eventi e gli oggetti precedenti al
-                        2000. Fin da piccolo mi appassionano le automobili
-                        d'epoca, la gastronomia, la televisione e le riviste del
-                        passato. Racconto storie a fumetti attraverso Car Crash
-                        Fumetti e fotografo auto per strada. Non ho mai visto
-                        una serie Netflix però conosco quasi a memoria tutte le
-                        puntate de Il Commissario Rex e di Squadra Speciale
-                        Cobra 11.
+                      <p className="text-left text-sm font-medium text-white md:text-lg">
+                        Cresciuta tra la nebbia della bassa padana, non temo
+                        alcun tasso di umidità. Porto con me la macchina
+                        fotografica anche quando la meta sono quattro passi
+                        sull’argine, anzi, soprattutto se la meta è quella.
+                        Lavoro a maglia, a volte ascoltando il punk hardcore.
+                        Voglio sempre sapere perché, l’obiettivo è non farsene
+                        un difetto; essere qui è un buon modo per provarci.
                       </p>
                     </blockquote>
                     <figcaption className="font-medium">
-                      <div className="text-sky-500 dark:text-sky-400">
-                        Greta Contardi
-                      </div>
-                      <div className="text-slate-400">
+                      <div className="text-sky-300">Greta Contardi</div>
+                      <div className="text-slate-300">
                         Redattrice e Social Media Analyst
                       </div>
                     </figcaption>
@@ -430,7 +408,7 @@ export default function Home({ articles }) {
               </div>
 
               <div className="mx-5 my-5 basis-1/3">
-                <figure className=" w-full rounded-xl bg-weekly p-8 md:p-4">
+                <figure className=" h-full rounded-xl bg-weekly p-8 md:p-4">
                   <div className="md:w-30 mx-auto h-24 w-24 md:h-auto md:rounded-full">
                     <Image
                       className="mx-auto h-24 w-24 justify-center rounded-full object-cover md:h-auto  md:w-48"
@@ -443,7 +421,7 @@ export default function Home({ articles }) {
 
                   <div class="space-y-4 pt-6 text-center md:p-8 md:text-left">
                     <blockquote>
-                      <p className="text-left text-sm font-medium text-white md:text-base">
+                      <p className="text-left text-sm font-medium text-white md:text-lg">
                         O più semplicemente Ambro. Non perché non voglia
                         rivelare le mie radici da provincia casertana, ma perché
                         col tempo mi ci sono affezionato. Di indole creativa e
@@ -457,10 +435,8 @@ export default function Home({ articles }) {
                       </p>
                     </blockquote>
                     <figcaption className="font-medium">
-                      <div className="text-sky-500 dark:text-sky-400">
-                        Pasquale Ambrosino
-                      </div>
-                      <div className="text-slate-400">
+                      <div className="text-sky-300">Pasquale Ambrosino</div>
+                      <div className="text-slate-300">
                         Redattore e Social Media Manager
                       </div>
                     </figcaption>
@@ -471,9 +447,9 @@ export default function Home({ articles }) {
 
             {/* Fifth row */}
 
-            <div className="flex flex-col lg:flex-row">
+            <div className="flex flex-col items-stretch lg:flex-row">
               <div className="mx-5 my-5 basis-1/3">
-                <figure className=" rounded-xl bg-weekly p-8 md:p-4 ">
+                <figure className=" h-full rounded-xl bg-weekly p-8 md:p-4 ">
                   <div className="md:w-30 mx-auto h-24 w-24 md:h-auto md:rounded-full">
                     <Image
                       className="mx-auto h-24 w-24 justify-center rounded-full object-cover md:h-auto  md:w-48"
@@ -486,7 +462,7 @@ export default function Home({ articles }) {
 
                   <div class="space-y-4 pt-6 text-center md:p-8 md:text-left">
                     <blockquote>
-                      <p className="text-left text-sm  font-medium text-white md:text-base">
+                      <p className="text-left text-sm  font-medium text-white md:text-lg">
                         Cresciuta nelle sperdute valli piemontesi, tra corse nei
                         prati, castagne e cieli tersi. Laureata in lettere, ma
                         in una relazione complicata con il latino e la
@@ -496,10 +472,8 @@ export default function Home({ articles }) {
                       </p>
                     </blockquote>
                     <figcaption className="font-medium">
-                      <div className="text-sky-500 dark:text-sky-400">
-                        Micol Maccario
-                      </div>
-                      <div className="text-slate-400">
+                      <div className="text-sky-300">Micol Maccario</div>
+                      <div className="text-slate-300">
                         Redattrice e Social Media Manager
                       </div>
                     </figcaption>
@@ -508,7 +482,7 @@ export default function Home({ articles }) {
               </div>
 
               <div className="mx-5 my-5 basis-1/3">
-                <figure className=" rounded-xl bg-weekly p-8 md:p-4 ">
+                <figure className=" h-full rounded-xl bg-weekly p-8 md:p-4 ">
                   <div className="md:w-30 mx-auto h-24 w-24 md:h-auto md:rounded-full">
                     <Image
                       className="mx-auto h-24 w-24 justify-center rounded-full object-cover md:h-auto  md:w-48"
@@ -521,7 +495,7 @@ export default function Home({ articles }) {
 
                   <div class="space-y-4 pt-6 text-center md:p-8 md:text-left">
                     <blockquote>
-                      <p className="text-left text-sm font-medium text-white md:text-base">
+                      <p className="text-left text-sm font-medium text-white md:text-lg">
                         Il cognome può disorientare ma la Sardegna è il luogo
                         dove sono nato e cresciuto. Studiare giornalismo ed
                         editoria mi ha portato a Parma per due anni. Leggo,
@@ -533,10 +507,8 @@ export default function Home({ articles }) {
                       </p>
                     </blockquote>
                     <figcaption className="font-medium">
-                      <div className="text-sky-500 dark:text-sky-400">
-                        Andrea Cicalò
-                      </div>
-                      <div className="text-slate-400">
+                      <div className="text-sky-300">Andrea Cicalò</div>
+                      <div className="text-slate-300">
                         Redattore e Social Media Manager
                       </div>
                     </figcaption>
@@ -545,7 +517,7 @@ export default function Home({ articles }) {
               </div>
 
               <div className="mx-5 my-5 basis-1/3">
-                <figure className=" w-full rounded-xl bg-weekly p-8 md:p-4">
+                <figure className=" h-full rounded-xl bg-weekly p-8 md:p-4">
                   <div className="md:w-30 mx-auto h-24 w-24 md:h-auto md:rounded-full">
                     <Image
                       className="mx-auto h-24 w-24 justify-center rounded-full object-cover md:h-auto  md:w-48"
@@ -558,7 +530,7 @@ export default function Home({ articles }) {
 
                   <div class="space-y-4 pt-6 text-center md:p-8 md:text-left">
                     <blockquote>
-                      <p className="text-left text-sm font-medium text-white md:text-base">
+                      <p className="text-left text-sm font-medium text-white md:text-lg">
                         Torinese solo sulla carta di identità, (anzi neanche lì,
                         vivo in provincia, ma la città fa più figo). Sono a
                         volte distratta e procrastinatrice seriale, ma ho anche
@@ -571,10 +543,8 @@ export default function Home({ articles }) {
                       </p>
                     </blockquote>
                     <figcaption className="font-medium">
-                      <div className="text-sky-500 dark:text-sky-400">
-                        Fabiana Fabbrini
-                      </div>
-                      <div className="text-slate-400">
+                      <div className="text-sky-300">Fabiana Fabbrini</div>
+                      <div className="text-slate-300">
                         Redattrice e Photo editor
                       </div>
                     </figcaption>
@@ -585,9 +555,9 @@ export default function Home({ articles }) {
 
             {/* Sixth row */}
 
-            <div className="flex flex-col lg:flex-row">
+            <div className="flex flex-col items-stretch lg:flex-row">
               <div className="mx-5 my-5 basis-1/3">
-                <figure className=" rounded-xl bg-weekly p-8 md:p-4 ">
+                <figure className=" h-full rounded-xl bg-weekly p-8 md:p-4 ">
                   <div className="md:w-30 mx-auto h-24 w-24 md:h-auto md:rounded-full">
                     <Image
                       className="mx-auto h-24 w-24 justify-center rounded-full object-cover md:h-auto  md:w-48"
@@ -600,7 +570,7 @@ export default function Home({ articles }) {
 
                   <div class="space-y-4 pt-6 text-center md:p-8 md:text-left">
                     <blockquote>
-                      <p className="text-left text-sm  font-medium text-white md:text-base">
+                      <p className="text-left text-sm  font-medium text-white md:text-lg">
                         Veneta d’origine, ma viandante. <br></br>In due anni ho
                         traslocato quattro volte. D’estate (e non solo) mi
                         rifugio a 2000 metri. Per metabolizzare i cambiamenti
@@ -612,10 +582,8 @@ export default function Home({ articles }) {
                       </p>
                     </blockquote>
                     <figcaption className="font-medium">
-                      <div className="text-sky-500 dark:text-sky-400">
-                        Erica Marconato
-                      </div>
-                      <div className="text-slate-400">
+                      <div className="text-sky-300">Erica Marconato</div>
+                      <div className="text-slate-300">
                         Redattrice e Photo Editor
                       </div>
                     </figcaption>
@@ -624,7 +592,7 @@ export default function Home({ articles }) {
               </div>
 
               <div className="mx-5 my-5 basis-1/3">
-                <figure className=" rounded-xl bg-weekly p-8 md:p-4 ">
+                <figure className=" h-full rounded-xl bg-weekly p-8 md:p-4 ">
                   <div className="md:w-30 mx-auto h-24 w-24 md:h-auto md:rounded-full">
                     <Image
                       className="mx-auto h-24 w-24 justify-center rounded-full object-cover md:h-auto  md:w-48"
@@ -637,7 +605,7 @@ export default function Home({ articles }) {
 
                   <div class="space-y-4 pt-6 text-center md:p-8 md:text-left">
                     <blockquote>
-                      <p className="text-left text-sm font-medium text-white md:text-base">
+                      <p className="text-left text-sm font-medium text-white md:text-lg">
                         Siciliana che sogna oltre i confini del mare. Guardo
                         sempre le cose con un certo pessimismo, ecco forse
                         perché mi interesso di tematiche ambientali e
@@ -647,10 +615,8 @@ export default function Home({ articles }) {
                       </p>
                     </blockquote>
                     <figcaption className="font-medium">
-                      <div className="text-sky-500 dark:text-sky-400">
-                        Giulia Cerami
-                      </div>
-                      <div className="text-slate-400">
+                      <div className="text-sky-300">Giulia Cerami</div>
+                      <div className="text-slate-300">
                         Redattrice e Content Creator
                       </div>
                     </figcaption>
@@ -659,7 +625,7 @@ export default function Home({ articles }) {
               </div>
 
               <div className="mx-5 my-5 basis-1/3">
-                <figure className=" w-full rounded-xl bg-weekly p-8 md:p-4">
+                <figure className=" h-full w-full rounded-xl bg-weekly p-8 md:p-4">
                   <div className="md:w-30 mx-auto h-24 w-24 md:h-auto md:rounded-full">
                     <Image
                       className="mx-auto h-24 w-24 justify-center rounded-full object-cover md:h-auto  md:w-48"
@@ -672,7 +638,7 @@ export default function Home({ articles }) {
 
                   <div class="space-y-4 pt-6 text-center md:p-8 md:text-left">
                     <blockquote>
-                      <p className="text-left text-sm font-medium text-white md:text-base">
+                      <p className="text-left text-sm font-medium text-white md:text-lg">
                         Nata nell'entroterra siciliano. Molto lontana dal mare
                         per sentirne l'odore ma non troppo per sfuggire dalla
                         sua attrazione. Cerco sempre di guardare il mondo dal
@@ -682,10 +648,8 @@ export default function Home({ articles }) {
                       </p>
                     </blockquote>
                     <figcaption className="font-medium">
-                      <div className="text-sky-500 dark:text-sky-400">
-                        Laura Lipari
-                      </div>
-                      <div className="text-slate-400">
+                      <div className="text-sky-300">Laura Lipari</div>
+                      <div className="text-slate-300">
                         Redattrice e Content Creator
                       </div>
                     </figcaption>
@@ -696,9 +660,9 @@ export default function Home({ articles }) {
 
             {/* Seventh row */}
 
-            <div className="flex flex-col lg:flex-row">
+            <div className="flex flex-col items-stretch lg:flex-row">
               <div className="mx-5 my-5 basis-1/3">
-                <figure className=" rounded-xl bg-weekly p-8 md:p-4 ">
+                <figure className=" h-full rounded-xl bg-weekly p-8 md:p-4 ">
                   <div className="md:w-30 mx-auto h-24 w-24 md:h-auto md:rounded-full">
                     <Image
                       className="mx-auto h-24 w-24 justify-center rounded-full object-cover md:h-auto  md:w-48"
@@ -711,7 +675,7 @@ export default function Home({ articles }) {
 
                   <div class="space-y-4 pt-6 text-center md:p-8 md:text-left">
                     <blockquote>
-                      <p className="text-left text-sm  font-medium text-white md:text-base">
+                      <p className="text-left text-sm  font-medium text-white md:text-lg">
                         Pugliese, ma senza accenti né radici profonde. Scandisco
                         le mie giornate in base ai pasti principali. Tramite la
                         fotografia cerco di dipanare il tessuto informe dei miei
@@ -723,10 +687,8 @@ export default function Home({ articles }) {
                       </p>
                     </blockquote>
                     <figcaption className="font-medium">
-                      <div className="text-sky-500 dark:text-sky-400">
-                        Simona Losito
-                      </div>
-                      <div className="text-slate-400">
+                      <div className="text-sky-300">Simona Losito</div>
+                      <div className="text-slate-300">
                         Redattrice e Podcaster
                       </div>
                     </figcaption>

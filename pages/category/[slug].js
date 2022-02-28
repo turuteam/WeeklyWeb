@@ -15,7 +15,7 @@ const CategoryArticle = ({ articles, categoryName }) => {
   return (
     <Layout>
       <div className="container mx-auto mb-8 px-10">
-        <div className="mx-5 mb-4 text-3xl font-bold ">{categoryName}</div>
+        <div className="mx-2 my-10 mb-8 text-3xl font-bold">{categoryName}</div>
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
           <div className="col-span-1 lg:col-span-8">

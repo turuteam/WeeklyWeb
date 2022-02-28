@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Author = ( { author} ) => {
   return (
-    <div className='text-center mt-20 mb-8 p-12 realtive rounded-lg bg-weekly'>
+    <div className='text-center mt-15 mb-8 p-12 realtive rounded-lg bg-weekly'>
       <div className=' relative left-0 right-0'>
         <Image
             src= {author.photo.url}

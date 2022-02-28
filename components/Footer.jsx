@@ -147,11 +147,11 @@ const Footer = () => {
       </div>
     </div>
   </div>
-  <div className="text-center p-6 bg-gray-200 block">
+  <div className="text-center p-2 bg-gray-200 block">
     <span>© 2022 Copyright: </span>
     <a className="text-gray-600 font-semibold" href="https://www.weeklyweb.it">Weekly</a>
     <span className="flex items-center justify-center md:justify">
-    <span className='mr-1'>Made with</span> <Heart /> <span className='ml-1'>by Omar Stringhini</span>
+    <span className='mr-1 text-sm'>Proudly made by Omar Stringhini</span>
   </span>
   </div>
   

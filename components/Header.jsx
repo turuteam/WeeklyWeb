@@ -74,7 +74,7 @@ const Header = () => {
               <li>
                 <Link href={`/firme`}>
                   <span className="mt-2 ml-4 cursor-pointer align-middle font-bold text-black text-xl hover:text-weekly md:float-right ">
-                    Firme
+                    La redazione
                   </span>
                  </Link>
               </li>
@@ -86,7 +86,7 @@ const Header = () => {
             <div className='flex flex-row-reverse'>
               <Link href='/firme'>
                 <span className="transition-duration-700 mt-2 ml-4 cursor-pointer align-middle font-bold text-black hover:text-weekly">
-                  Firme
+                  La redazione
                 </span>
               </Link>
               {categories.map((category, index) => (

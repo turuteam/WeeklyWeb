@@ -140,8 +140,8 @@ const ArticleDetail = ({ article }) => {
           <div className="mr-8 hidden items-center items-center justify-center md:flex lg:mb-0 lg:w-auto">
             <img
               alt={article.author.name}
-              height="30px"
-              width="30px"
+              height="50"
+              width="50"
               className="align-middle rounded-full"
               src={article.author.photo.url}
             />
