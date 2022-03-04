@@ -56,7 +56,7 @@ const contentRenderer = {
   },
   'heading-two': ({ children }) => {
     return (
-      <h2 className="mb-4 text-3xl font-semibold">
+      <h2 className="mb-4 text-2xl font-semibold">
         {children.map((content, index) => (
           <React.Fragment key={index}>{content.text}</React.Fragment>
         ))}
@@ -65,7 +65,7 @@ const contentRenderer = {
   },
   'heading-three': ({ children }) => {
     return (
-      <h3 className="mb-4 text-2xl font-semibold">
+      <h3 className="mb-4 text-xl font-semibold">
         {children.map((content, index) => (
           <React.Fragment key={index}>{renderText(content)}</React.Fragment>
         ))}
@@ -74,7 +74,7 @@ const contentRenderer = {
   },
   'heading-four': ({ children }) => {
     return (
-      <h4 className="mb-4 text-xl font-semibold">
+      <h4 className="mb-4 text-lg font-semibold">
         {children.map((content, index) => (
           <React.Fragment key={index}>{renderText(content)}</React.Fragment>
         ))}

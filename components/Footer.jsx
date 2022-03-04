@@ -32,7 +32,7 @@ const Footer = () => {
           </path>
         </svg>
       </a>
-      <a href="https://twitter.com/Weekly_it" className="mr-6 text-white hover:text-black">
+      <a href="https://twitter.com/Weekly_it" className="mr-6 text-white hover:text-black hover:scale-125">
         <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter"
           className="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <path fill="currentColor"
@@ -40,7 +40,7 @@ const Footer = () => {
           </path>
         </svg>
       </a>
-      <a href="https://www.instagram.com/weekly.it/" className="mr-6 text-white hover:text-black">
+      <a href="https://www.instagram.com/weekly.it/" className="mr-6 text-white hover:text-black hover:scale-125">
         <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram"
           className="w-3.5" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
           <path fill="currentColor"
@@ -89,7 +89,7 @@ const Footer = () => {
       </div>
       <div>
       <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
-          Pagine
+          Sezioni
         </h6>
         <ul className=''>
           {categories.map((category, index) => (
