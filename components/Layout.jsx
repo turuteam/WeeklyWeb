@@ -10,7 +10,7 @@ const Layout = ({ metaSeo = {}, isArticle = false, children }) => {
   <>
     <Head>
       <title>{metaSeo?.metaTitle || 'Weekly'} </title>
-      <link rel="icon" href="/favicon2.ico" />
+      <link rel="icon" href="/favicon1.ico" />
       <meta description={metaSeo?.metaDescription || 'default value'} />
 
       <meta name='og:title' content={metaSeo?.metaTitle || 'Weekly'} />

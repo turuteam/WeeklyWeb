@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import first from '../images/1.jpg'
 import second from '../images/2.jpg'
 import third from '../images/3.jpg'
 
-const images = [second, third];
+const images = [first, second, third];
 
 export default function ImageSwapper() {
     const [currentImage, setCurrentImage] = useState(second);
