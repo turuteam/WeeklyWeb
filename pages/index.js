@@ -15,13 +15,15 @@ function index1() {
         <title>{'Weekly'} </title>
         <link rel="icon" href="/logoInsta2.png" />
       </Head>
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid gap-5 md:grid-cols-1 lg:grid-cols-2">
         <div className="flex flex-col ">
           <div className=" left-50 top-50 ">
             <Image src={logoSocial} width={100} height={100} />
           </div>
 
-          <h2 className="pb-60 pt-40 pl-10 text-7xl">Lavori in corso</h2>
+          <h2 className="pb-60 pt-40 pl-10 text-7xl">
+            Lavori in corso <span className="animate-pulse">...</span>
+          </h2>
 
           <div className="flex flex-row"></div>
 
