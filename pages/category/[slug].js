@@ -5,7 +5,7 @@ import { getCategories, getCategoryArticle } from '../../services'
 import { ArticleCard, Categories, Loader } from '../../components'
 import Layout from '../../components/Layout'
 
-const CategoryArticle = ({ articles }) => {
+const CategoryArticle = ({ articles, categoryName }) => {
   const router = useRouter()
 
   if (router.isFallback) {
@@ -15,6 +15,8 @@ const CategoryArticle = ({ articles }) => {
   return (
     <Layout>
       <div className="container mx-auto mb-8 px-10">
+        <div className="mx-2 my-10 mb-8 text-3xl font-bold">{categoryName}</div>
+
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
           <div className="col-span-1 lg:col-span-8">
             {articles.slug}
@@ -23,9 +25,7 @@ const CategoryArticle = ({ articles }) => {
             ))}
           </div>
           <div className="col-span-1 lg:col-span-4">
-            <div className="relative top-8 lg:sticky">
-              <Categories />
-            </div>
+            <div className="relative top-8 lg:sticky"></div>
           </div>
         </div>
       </div>
@@ -37,9 +37,11 @@ export default CategoryArticle
 // Fetch data at build time
 export async function getStaticProps({ params }) {
   const articles = await getCategoryArticle(params.slug)
+  const categories = await getCategories()
+  const currentCategory = categories.find((cat) => cat.slug === params.slug)
 
   return {
-    props: { articles },
+    props: { articles, categoryName: currentCategory.name },
   }
 }
 

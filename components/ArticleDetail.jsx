@@ -56,7 +56,7 @@ const contentRenderer = {
   },
   'heading-two': ({ children }) => {
     return (
-      <h2 className="mb-4 text-3xl font-semibold">
+      <h2 className="mb-4 text-2xl font-semibold">
         {children.map((content, index) => (
           <React.Fragment key={index}>{content.text}</React.Fragment>
         ))}
@@ -65,7 +65,7 @@ const contentRenderer = {
   },
   'heading-three': ({ children }) => {
     return (
-      <h3 className="mb-4 text-2xl font-semibold">
+      <h3 className="mb-4 text-xl font-semibold">
         {children.map((content, index) => (
           <React.Fragment key={index}>{renderText(content)}</React.Fragment>
         ))}
@@ -74,7 +74,7 @@ const contentRenderer = {
   },
   'heading-four': ({ children }) => {
     return (
-      <h4 className="mb-4 text-xl font-semibold">
+      <h4 className="mb-4 text-lg font-semibold">
         {children.map((content, index) => (
           <React.Fragment key={index}>{renderText(content)}</React.Fragment>
         ))}
@@ -83,7 +83,7 @@ const contentRenderer = {
   },
   'block-quote': ({ children }) => {
     return (
-      <blockquote className="quote border-l-4 border-neutral-500 bg-neutral-100 p-4 italic text-neutral-600">
+      <blockquote className="quote p-4 italic text-neutral-600">
         {children.map((content, index) => (
           <React.Fragment key={index}>{renderText(content)}</React.Fragment>
         ))}
@@ -140,8 +140,8 @@ const ArticleDetail = ({ article }) => {
           <div className="mr-8 hidden items-center items-center justify-center md:flex lg:mb-0 lg:w-auto">
             <img
               alt={article.author.name}
-              height="30px"
-              width="30px"
+              height="50"
+              width="50"
               className="align-middle rounded-full"
               src={article.author.photo.url}
             />
@@ -187,5 +187,5 @@ const ArticleDetail = ({ article }) => {
   )
 }
 
-export default ArticleDetail
-// export default AddThis;
+export default ArticleDetail;
+

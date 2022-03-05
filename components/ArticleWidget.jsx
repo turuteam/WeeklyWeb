@@ -22,7 +22,7 @@ const ArticleWidget = ({ categories, slug }) => {
   return(
     <div className='bg-white shadow-lg p-8 mb-8'>
       
-        <h3 className='text-l mb-8 font-semibold border-t-4 border-weekly uppercase text-black '>
+        <h3 className='text-base mb-8 font-semibold border-t-4 border-weekly uppercase text-black '>
           {slug ? 'Della stessa categoria ' : 'Ultime da weekly'}
         </h3>
         {relatedArticles.map((article) => (

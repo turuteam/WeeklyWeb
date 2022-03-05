@@ -1,20 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import logo2 from "../images/Weekly_logo_bianco_Weekly_logo_bianco.png"
 import Heart  from './Heart';
+import { getCategories } from '../services'
 
 
 
 const Footer = () => {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+      getCategories().then((newCategories) => {
+        setCategories(newCategories);
+    });
+  }, []);
+
   return <div>
       <footer className="text-center lg:text-left bg-weekly ">
-  <div className="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300 text-white">
+  <div className="flex justify-left items-center  p-6 border-b border-gray-300 text-white">
     <div className="mr-12 hidden lg:block">
       <span>Seguici sui principali social network:</span>
     </div>
     <div className="flex justify-center ">
-      <a href="https://www.facebook.com/WeeklyRedazione" className="mr-6 text-white hover:text-black">
+      <a href="https://www.facebook.com/WeeklyRedazione" className="mr-6 text-white hover:text-black hover:scale-125">
         <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f"
           className="w-2.5" role="img" xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 320 512">
@@ -23,7 +32,7 @@ const Footer = () => {
           </path>
         </svg>
       </a>
-      <a href="https://twitter.com/Weekly_it" className="mr-6 text-white hover:text-black">
+      <a href="https://twitter.com/Weekly_it" className="mr-6 text-white hover:text-black hover:scale-125">
         <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter"
           className="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <path fill="currentColor"
@@ -31,7 +40,7 @@ const Footer = () => {
           </path>
         </svg>
       </a>
-      <a href="https://www.instagram.com/weekly.it/" className="mr-6 text-white hover:text-black">
+      <a href="https://www.instagram.com/weekly.it/" className="mr-6 text-white hover:text-black hover:scale-125">
         <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram"
           className="w-3.5" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
           <path fill="currentColor"
@@ -48,23 +57,50 @@ const Footer = () => {
         <p>
           Approfondimenti | Prospettive | Scenari
         </p>
+        <div className='pt-10'>
+          <a href="/firme" className='hover:underline'>
+            <p> Redazione</p>
+          </a>
+          <a href="/informativa" className='hover:underline'>
+            <p>Informativa</p>
+          </a>
+          <a href="/disclaimer" className='hover:underline'>
+            <p>Disclaimer</p>
+          </a>
+        </div>
+        
+
       </div>
-      <div className="">
+      {/* <div className="">
         <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
           Informativa
         </h6>
         <p className="mb-4">
-        Tutti i contenuti di Weekly possono essere utilizzati da altre testate o siti internet è molto gradito in caso citare la fonte con un link (follow) o collegamento visibile a weeklyweb.it e alla pagina dell'articolo.
+        Tutti i contenuti di Weekly possono essere utilizzati da altre testate o siti internet. <br></br>È molto gradito in caso citare la fonte con un link (follow) o collegamento visibile a weeklyweb.it e alla pagina dell'articolo.
         </p>
-      </div>
+      </div> */}
       <div className="">
         <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
           Disclaimer
         </h6>
         <p className="mb-4">
-        Le immagine presenti su Weekly sono tratte da internet in quanto valutate di pubblico dominio. Nel caso di valutazione impropria o utilizzo di immagini protette da copyright vi preghiamo di inoltrare richiesta ai nostri contatti, in modo da procedere con la sostituzione del contenuto.
+        Le immagini presenti su Weekly sono tratte da internet in quanto valutate di pubblico dominio. Nel caso di valutazione impropria o utilizzo di immagini protette da copyright vi preghiamo di inoltrare richiesta ai nostri contatti, in modo da procedere con la sostituzione del contenuto.
         </p>
       </div>
+      <div>
+      <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+          Sezioni
+        </h6>
+        <ul className=''>
+          {categories.map((category, index) => (
+            <Link key={index} href={`/category/${category.slug}`}>
+              <li className='hover:underline'>{category.name}</li>
+            </Link>
+          ))}
+        </ul>
+        
+      </div>
+      
       <div className="">
         <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
           Contatti
@@ -111,11 +147,11 @@ const Footer = () => {
       </div>
     </div>
   </div>
-  <div className="text-center p-6 bg-gray-200 block">
+  <div className="text-center p-2 bg-gray-200 block">
     <span>© 2022 Copyright: </span>
-    <a className="text-gray-600 font-semibold" href="/">Weekly</a>
+    <a className="text-gray-600 font-semibold" href="https://www.weeklyweb.it">Weekly</a>
     <span className="flex items-center justify-center md:justify">
-    <span className='mr-1'>Made with</span> <Heart /> <span className='ml-1'>by Omar Stringhini</span>
+    <span className='mr-1 text-sm'>Proudly made by Omar Stringhini</span>
   </span>
   </div>
   
