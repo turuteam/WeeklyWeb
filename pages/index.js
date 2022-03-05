@@ -1,14 +1,20 @@
 import React, { useEffect } from 'react'
 import Image from 'next/image'
+import { Layout } from '../components'
 import logoSocial from '../images/Weekly_logo_instagram-27.png'
 import cover from '../images/coverWeekly.png'
 import ImageSwapper from '../components/ImageSwapper'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Head from 'next/head'
 
 function index1() {
   return (
     <>
+      <Head>
+        <title>{'Weekly'} </title>
+        <link rel="icon" href="/logoInsta2.png" />
+      </Head>
       <div className="grid grid-cols-2 gap-5">
         <div className="flex flex-col ">
           <div className=" left-50 top-50 ">
