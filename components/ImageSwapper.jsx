@@ -7,7 +7,7 @@ import third from '../images/3.jpg'
 const images = [first, second, third];
 
 export default function ImageSwapper() {
-    const [currentImage, setCurrentImage] = useState(second);
+    const [currentImage, setCurrentImage] = useState(first);
 
     useEffect(() => {
         const intervalId = setInterval(() => {
