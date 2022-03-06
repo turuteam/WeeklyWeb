@@ -31,7 +31,7 @@ const ArticleCard = ({ article }) => {
               className='object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg'
            />
         </div>
-        <h1 className='text-white transition duration-700 text-center text-3xl mb-8 cursor-pointer hover:underline font-semibold pb-1'>
+        <h1 className='text-white mx-5 transition duration-700 text-center text-3xl mb-8 cursor-pointer hover:underline font-semibold pb-1'>
           <Link href={`/article/${article.slug}`}> 
             {article.title}
           </Link>
@@ -47,10 +47,12 @@ const ArticleCard = ({ article }) => {
                 />
                 <p className='inline align-middle text-white-700 ml-2 text-lg'>{article.author.name}</p>
           </div>
-          <div className="font-medium text-white-700"></div>
-            <span>
+          <div className="font-medium text-white-700">
+          <span>
               {moment(article.createdAt).format('D MMMM YYYY')}
             </span>
+            </div>
+            
         </div>
     </div>
   </div>

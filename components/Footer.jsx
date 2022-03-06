@@ -18,7 +18,7 @@ const Footer = () => {
 
   return <div>
       <footer className="text-center lg:text-left bg-weekly ">
-  <div className="flex justify-left items-center  p-6 border-b border-gray-300 text-white">
+  <div className="flex lg:justify-left items-center p-6 border-b border-gray-300 text-white ">
     <div className="mr-12 hidden lg:block">
       <span>Seguici sui principali social network:</span>
     </div>
@@ -91,7 +91,7 @@ const Footer = () => {
       <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
           Sezioni
         </h6>
-        <ul className=''>
+        <ul className='cursor-pointer'>
           {categories.map((category, index) => (
             <Link key={index} href={`/category/${category.slug}`}>
               <li className='hover:underline'>{category.name}</li>
