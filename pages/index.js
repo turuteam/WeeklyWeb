@@ -1,47 +1,38 @@
-import React, { useEffect } from 'react'
-import Image from 'next/image'
-import { Layout } from '../components'
-import logoSocial from '../images/Weekly_logo_instagram-27.png'
-import cover from '../images/coverWeekly.png'
-import ImageSwapper from '../components/ImageSwapper'
+import { ArticleCard, Categories, ArticleWidget } from '../components'
+import { getArticles } from '../services'
+import FeaturedArticles from '../sections/FeaturedArticles'
+import Layout from '../components/Layout'
+import Video from '../components/Video'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Head from 'next/head'
-
-function index1() {
+export default function Home({ articles }) {
   return (
-    <>
-      <Head>
-        <title>{'Weekly'} </title>
-        <link rel="icon" href="/logoInsta2.png" />
-      </Head>
-      <div className="grid gap-5 md:grid-cols-1 lg:grid-cols-2">
-        <div className="flex flex-col ">
-          <div className=" left-50 top-50 ">
-            <Image src={logoSocial} width={100} height={100} />
+    <Layout>
+      <div className="container mx-auto mb-8 px-10">
+        <FeaturedArticles />
+
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+          <div className="col-span-1 lg:col-span-8">
+            {articles.map((article, index) => (
+              <ArticleCard article={article.node} key={index} />
+            ))}
           </div>
 
-          <h2 className="pb-60 pt-40 pl-10 text-7xl">
-            Lavori in corso <span className="animate-pulse">...</span>
-          </h2>
-
-          <div className="flex flex-row"></div>
-
-          <style>{`
-        h2{
-            font-family:"Playfair Display"
-        }
-      `}</style>
-        </div>
-
-        <div className="object-fill">
-          <div>
-            <ImageSwapper className="object-fill" />
+          <div className="col-span-1 lg:col-span-4">
+            <div className="relative top-8 lg:sticky">
+              <Video />
+              <ArticleWidget />
+            </div>
           </div>
         </div>
       </div>
-    </>
+    </Layout>
   )
 }
 
-export default index1
+export async function getStaticProps() {
+  const articles = (await getArticles()) || []
+
+  return {
+    props: { articles },
+  }
+}
