@@ -54,7 +54,7 @@ const Footer = () => {
     <div className="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <div className="block ">
         <Image className='logo2' src={logo2} alt="WEEKLYweb.it" width={140} height={40} />
-        <p>
+        <p className='font-sm'>
           Approfondimenti | Prospettive | Scenari
         </p>
         <div className='pt-10'>
