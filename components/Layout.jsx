@@ -11,10 +11,10 @@ const Layout = ({ metaSeo = {}, isArticle = false, children }) => {
     <Head>
       <title>{metaSeo?.metaTitle || 'Weekly'} </title>
       <link rel="icon" href="/favicon1.ico" />
-      <meta description={metaSeo?.metaDescription || 'default value'} />
+      <meta description={metaSeo?.metaDescription || 'Magazine online di approfondimento, notizie, interviste, podcast.'} />
 
       <meta name='og:title' content={metaSeo?.metaTitle || 'Weekly'} />
-      <meta name='og:description' content={metaSeo?.metaDescription || 'default value'} />
+      <meta name='og:description' content={metaSeo?.metaDescription || 'Magazine online di approfondimento, notizie, interviste, podcast.'} />
       <meta name='og:url' content={`http://www.weeklyweb.it/category/${metaSeo?.metaSlug}`} />
       <meta name='og:site_name' content={'Weekly'} />
       <meta property='og:locale' content={'it_IT'} key='og:locale' />
@@ -24,7 +24,7 @@ const Layout = ({ metaSeo = {}, isArticle = false, children }) => {
           <meta property='og:type' content='article' key='og:type' />
           <meta property='og:image' content={`${metaSeo?.ogImage?.url}`} key='og:image' />
           <meta name='twitter:card' content='summary_large_image' key='twitter:card' />
-          <meta property='article:published_time' content={metaSeo?.createdAt} key='article:published_time' />
+          <meta property='article:published_time' content={metaSeo?.updatedAt} key='article:published_time' />
         </>
       )}
     </Head>

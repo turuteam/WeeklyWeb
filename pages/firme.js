@@ -431,7 +431,7 @@ export default function Home({ articles }) {
                         fervido collezionista di dischi, grazie alla musica mi
                         sento libero di esplorare, di immergermi in lingue,
                         culture, forme d'arte diverse. Spesso, la mia penna
-                        incontra storie e impossibili e popoli lontani.
+                        incontra storie impossibili e popoli lontani.
                       </p>
                     </blockquote>
                     <figcaption className="font-medium">
@@ -531,15 +531,11 @@ export default function Home({ articles }) {
                   <div class="space-y-4 pt-6 text-center md:p-8 md:text-left">
                     <blockquote>
                       <p className="text-left text-sm font-medium text-white md:text-lg">
-                        Torinese solo sulla carta di identità, (anzi neanche lì,
-                        vivo in provincia, ma la città fa più figo). Sono a
-                        volte distratta e procrastinatrice seriale, ma ho anche
-                        dei difetti. Scrivere mi riesce più semplice che parlare
-                        quando voglio dire qualcosa di vero e importante. Mi
-                        interesso di tutto perché spesso non riesco a scegliere-
-                        tranne che per il cinema, quello lo scelgo sempre-
-                        lascio che a guidarmi sia la mia grande curiosità e non
-                        la categoria.
+                        Genovese di nascita ma di radici nomadi. Incapace di
+                        gustare una vita inattiva, le gambe sono il motore del
+                        mio corpo, in perpetuo movimento nello spazio. Amante
+                        della natura e delle sue risorse. Narratrice di
+                        immagini, anima in viaggio.
                       </p>
                     </blockquote>
                     <figcaption className="font-medium">

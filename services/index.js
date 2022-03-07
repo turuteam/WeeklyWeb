@@ -5,10 +5,10 @@ const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT
 export const getArticles = async () => {
   const query = gql`
     query MyQuery {
-      articlesConnection {
+      articlesConnection(orderBy: updatedAt_DESC) {
         edges {
           node {
-            createdAt
+            updatedAt
             slug
             title
             isInterview
@@ -74,7 +74,7 @@ export const getArticleDetails = async (slug) => {
             url
           }
         }
-        createdAt
+        updatedAt
         slug
         content {
           raw
@@ -103,14 +103,14 @@ export const getRecentArticles = async () => {
   const query = gql`
     query GetArticleDetails(){
         articles(
-            orderBy: createdAt_ASC
+            orderBy: updatedAt_ASC
             last: 6
         ){
             title
             featuredImage{
                 url
             }
-            createdAt
+            updatedAt
             slug
         }
     }
@@ -134,7 +134,7 @@ export const getSimilarArticles = async (categories, slug) => {
         featuredImage {
           url
         }
-        createdAt
+        updatedAt
         slug
       }
     }
@@ -143,37 +143,37 @@ export const getSimilarArticles = async (categories, slug) => {
   return result.articles
 }
 
-export const getAdjacentArticles = async (createdAt, slug) => {
+export const getAdjacentArticles = async (updatedAt, slug) => {
   const query = gql`
-    query GetAdjacentArticles($createdAt: DateTime!, $slug: String!) {
+    query GetAdjacentArticles($updatedAt: DateTime!, $slug: String!) {
       next: articles(
         first: 1
-        orderBy: createdAt_ASC
-        where: { slug_not: $slug, AND: { createdAt_gte: $createdAt } }
+        orderBy: updatedAt_ASC
+        where: { slug_not: $slug, AND: { updatedAt_gte: $updatedAt } }
       ) {
         title
         featuredImage {
           url
         }
-        createdAt
+        updatedAt
         slug
       }
       previous: articles(
         first: 1
-        orderBy: createdAt_DESC
-        where: { slug_not: $slug, AND: { createdAt_lte: $createdAt } }
+        orderBy: updatedAt_DESC
+        where: { slug_not: $slug, AND: { updatedAt_lte: $updatedAt } }
       ) {
         title
         featuredImage {
           url
         }
-        createdAt
+        updatedAt
         slug
       }
     }
   `
 
-  const result = await request(graphqlAPI, query, { slug, createdAt })
+  const result = await request(graphqlAPI, query, { slug, updatedAt })
 
   return { next: result.next[0], previous: result.previous[0] }
 }
@@ -193,7 +193,7 @@ export const getCategoryArticle = async (slug) => {
                 url
               }
             }
-            createdAt
+            updatedAt
             slug
             title
             featuredImage {
@@ -229,7 +229,7 @@ export const getFeaturedArticles = async () => {
         }
         title
         slug
-        createdAt
+        updatedAt
       }
     }   
   `

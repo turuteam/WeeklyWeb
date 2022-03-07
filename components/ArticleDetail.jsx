@@ -166,7 +166,7 @@ const ArticleDetail = ({ article }) => {
             </svg>
             <span className="align-middle">
               
-              {moment(article.createdAt).format('DD MMMM YYYY')}
+              {moment(article.updatedAt).format('DD MMMM YYYY')}
             </span>
           </div>
         </div>

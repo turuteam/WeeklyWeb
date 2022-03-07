@@ -38,7 +38,7 @@ const ArticleWidget = ({ categories, slug }) => {
             </div>
             <div className='flex-grow ml-4'>
               <p className='text-gray-500 font-xs'>
-                {moment(article.createdAt).format('D MMMM YYYY')}
+                {moment(article.updatedAt).format('D MMMM YYYY')}
               </p>
               <Link href={`/article/${article.slug}`} key={article.title} className='text-base'>
                 {article.title}

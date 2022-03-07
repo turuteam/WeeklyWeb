@@ -23,7 +23,7 @@ const ArticleDetails = ({ article }) => {
 
   const metaSeo = {
     ...article?.seo,
-    createdAt: article?.createdAt,
+    updatedAt: article?.updatedAt,
   }
 
   console.log(metaSeo)
@@ -39,7 +39,7 @@ const ArticleDetails = ({ article }) => {
             <Author author={article.author} />
             <AdjacentArticles
               slug={article.slug}
-              createdAt={article.createdAt}
+              updatedAt={article.updatedAt}
             />
           </div>
           <div className="col-span-1 lg:col-span-4">

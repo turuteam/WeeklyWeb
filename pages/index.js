@@ -21,6 +21,7 @@ export default function Home({ articles }) {
             <div className="relative top-8 lg:sticky">
               <Video />
               <ArticleWidget />
+              <Categories />
             </div>
           </div>
         </div>
