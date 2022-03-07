@@ -8,10 +8,10 @@ const ArticleCard = ({ article }) => {
   if(article.isInterview){
     return ( 
     <div className='shadow-lg p-0 lg:p-0 pb-0 mb-8 rounded-lg'>
-      <div className='border-8 border-solid rounded-md border-weekly p-3  pb-3 hover:animate-pulse'>
+      <div className='border-8 border-solid rounded-md border-weekly p-3 lg:h-44 pb-3 hover:animate-pulse'>
         <span className='absolute -mt-7 -ml-50w-full flex justify-center text-white bg-weekly uppercase text-base
         font-semibold font-sans tracking-wide whitespace-pre'>  L'Intervista  </span>
-        <div className='font-semibold text-2xl uppercase '>
+        <div className='font-semibold text-2xl lg:text-4xl sm:leading-loose uppercase mt-5 text-center'>
           <Link href={`/article/${article.slug}`}>
             {article.title}
           </Link>
@@ -49,7 +49,7 @@ const ArticleCard = ({ article }) => {
           </div>
           <div className="font-medium text-white-700">
           <span>
-              {moment(article.createdAt).format('D MMMM YYYY')}
+              {moment(article.updatedAt).format('D MMMM YYYY')}
             </span>
             </div>
             
